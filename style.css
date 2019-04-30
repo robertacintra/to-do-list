@@ -15,6 +15,8 @@ ul li {
     background: rgb(250, 207, 240);
     font-size: 18px;
     transition: 0.2s;
+    margin-top: 10px;
+    list-style: none;
 
 /* make the list items unselectable 
     -webkit-user-select: none;
