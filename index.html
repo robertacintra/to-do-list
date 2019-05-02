@@ -1,4 +1,5 @@
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,22 +7,28 @@
     <link rel="stylesheet" href="./style.css">
     <title>to-do list✨</title>
 </head>
+
 <body>
     <div class="container">
 
-    <div id="myDIV" class="header">
-        <h2>✨to-do list✨</h2>
-        <input type="text" id="myInput" placeholder="adicione uma nova tarefa">
-        <span onClick="addList()" class="addBtn">add</span>
-    </div>
+        <div id="myDIV" class="header">
+            <h2>✨to-do list✨</h2>
+            <input type="text" id="myInput" placeholder="adicione uma nova tarefa">
+            <span onclick="addList()" class="Btn">add</span>
+        </div>
 
-    <ul id="myList">
-        
-    </ul>
+        <div>
+            <ul id="myList">
+            </ul>
+        </div>
 
-    <span id="btn" class="addBtn">apagar tudo!</span>
-    
+        <div>
+            <span id="btnExcluir" class="Btn">apagar tudo!</span>
+            <span id="btnMarcar" class="Btn">marcar tudo!</span>
+        </div>
+
     </div>
     <script src="./main.js"></script>
 </body>
+
 </html>

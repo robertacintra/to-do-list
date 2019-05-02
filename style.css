@@ -23,10 +23,6 @@ ul li:nth-child(odd) {
     background: #c9e8fa;
 }
 
-ul li:hover {
-    background: rgb(182, 182, 182);
-}
-
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
     background: rgb(204, 202, 202);
@@ -85,7 +81,7 @@ input {
     font-size: 16px;
 }
 
-.addBtn {
+.Btn {
     padding: 10px;
     width: 25%;
     background: #3af321;
@@ -100,6 +96,7 @@ input {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.addBtn:hover {
+.Btn:hover {
     background-color: rgb(155, 253, 125);
 }
+

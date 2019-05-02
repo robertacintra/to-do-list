@@ -1,5 +1,3 @@
-//btn do checked - criar uma função de clique que adiciona a classe checked a todos os lis
-//btn delete - pega todos os lis checked e da o hide()
 
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
@@ -16,16 +14,24 @@ for (i = 0; i < myNodelist.length; i++) {
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
+    close[i].onclick = function () {
         let div = this.parentElement;
         div.style.display = "none";
     }
 }
 
+// Input the value with Enter key
+document.addEventListener("keypress", function (event) {
+    if (event.key == "Enter") {
+        addList();
+    }
+});
+
+
 function addList() {
     const li = document.createElement("li");
     const inputValue = document.getElementById("myInput").value;
-    
+
     //validates the input field
     if (inputValue.length === 0 || inputValue.replace(/\s+/g, '').length === 0) {
         alert("Você deve escrever algo!");
@@ -44,23 +50,28 @@ function addList() {
     li.appendChild(span);
 
     for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
+        close[i].onclick = function () {
             let div = this.parentElement;
             div.style.display = "none";
         }
     }
 
     // delete all itens on the list!!!!!!!!!!!!!!!!!!!!!!!!!! FOI MENINAS
-    let btn = document.getElementById("btn");
-
-    btn.addEventListener("click", function(){
-    li.remove();
+    let btnExcluir = document.getElementById("btnExcluir");
+    btnExcluir.addEventListener("click", function () {
+        li.remove();
     })
-}
+
+    // check all itens on the list
+    let btnMarcar = document.getElementById("btnMarcar");
+    btnMarcar.addEventListener("click", function () {
+        li.className = "checked";
+    })}
+    
 
 // check symbol when clicking on a list item
 const list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
+list.addEventListener('click', function (ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
     }
