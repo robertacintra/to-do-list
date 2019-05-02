@@ -17,15 +17,8 @@ ul li {
     transition: 0.2s;
     margin-top: 10px;
     list-style: none;
-
-/* make the list items unselectable 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;*/
 }
 
-/* Set all odd list items to a different color (zebra-stripes)*/
 ul li:nth-child(odd) {
     background: #c9e8fa;
 }
@@ -36,7 +29,7 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-    background: #888;
+    background: rgb(204, 202, 202);
     color: #fff;
     text-decoration: line-through;
 }
@@ -55,7 +48,6 @@ ul li.checked::before {
     width: 7px;
 }
 
-/* Style the close button */
 .close {
     position: absolute;
     right: 0;
@@ -77,14 +69,12 @@ ul li.checked::before {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Clear floats after the header */
 .header:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Style the input */
 input {
     margin: 0;
     border: none;
@@ -95,7 +85,6 @@ input {
     font-size: 16px;
 }
 
-/* Style the "Add" button */
 .addBtn {
     padding: 10px;
     width: 25%;
@@ -108,6 +97,7 @@ input {
     transition: 0.3s;
     border-radius: 0;
     text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .addBtn:hover {
