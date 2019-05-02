@@ -37,7 +37,6 @@ function addList() {
     document.getElementById("myList").appendChild(li);
     li.appendChild(t);
     document.getElementById("myInput").value = "";
-    //li.classList.add("btnx");
     let span = document.createElement("SPAN");
     let txt = document.createTextNode("\u00D7");
     span.className = "close";
@@ -50,6 +49,13 @@ function addList() {
             div.style.display = "none";
         }
     }
+
+    // delete all itens on the list!!!!!!!!!!!!!!!!!!!!!!!!!! FOI MENINAS
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function(){
+    li.remove();
+    })
 }
 
 // check symbol when clicking on a list item
@@ -60,12 +66,3 @@ list.addEventListener('click', function(ev) {
     }
 }, false);
 
-// delete all itens on the list
-function excluirTudo() {
-    var x = document.getElementById("myList");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
