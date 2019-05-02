@@ -1,3 +1,4 @@
+let dragging;
 
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
@@ -26,7 +27,6 @@ document.addEventListener("keypress", function (event) {
         addList();
     }
 });
-
 
 function addList() {
     const li = document.createElement("li");
@@ -66,7 +66,26 @@ function addList() {
     let btnMarcar = document.getElementById("btnMarcar");
     btnMarcar.addEventListener("click", function () {
         li.className = "checked";
-    })}
+    })
+
+    li.setAttribute('draggable', true);
+    
+// dragstart
+    li.addEventListener("dragstart", function (ev) {
+        dragging = ev.target.closest("li")
+    })
+
+    li.addEventListener("dragover", function (ev) { 
+        ev.preventDefault();
+        const node = ev.target.closest("li")
+        this.parentNode.insertBefore(dragging, node)
+    })
+
+    li.addEventListener("dragend", function (ev) {  
+        dragging = null
+})
+
+}
     
 
 // check symbol when clicking on a list item
@@ -76,4 +95,3 @@ list.addEventListener('click', function (ev) {
         ev.target.classList.toggle('checked');
     }
 }, false);
-
