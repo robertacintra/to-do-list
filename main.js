@@ -84,9 +84,7 @@ function addList() {
     li.addEventListener("dragend", function (ev) {  
         dragging = null
 })
-
 }
-    
 
 // check symbol when clicking on a list item
 const list = document.querySelector('ul');

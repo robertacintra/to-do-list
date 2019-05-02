@@ -23,7 +23,7 @@ ul li:nth-child(odd) {
     background: #c9e8fa;
 }
 
-/* When clicked on, add a background color and strike out text */
+/* on click, add a background color and strike out text */
 ul li.checked {
     background: rgb(204, 202, 202);
     color: #fff;
